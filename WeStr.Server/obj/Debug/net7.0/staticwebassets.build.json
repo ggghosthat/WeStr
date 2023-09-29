@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "W9dIkyu0dEXgNKD8AXbXsQzXee5Dq7j3tq2IbJQIBak=",
+  "Source": "WeStr.Server",
+  "BasePath": "_content/WeStr.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

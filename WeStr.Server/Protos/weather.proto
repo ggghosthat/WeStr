@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option csharp_namespace = "WeStr.Server";
+
+package WeStr;
+
+service WeStrService {
+    rpc GetCurrentWeather (CurrentWeatherRequest) returns (CurrentWeatherReply);
+}
+
+message CurrentWeatherRequest {
+    double lat = 1;
+    double lon = 2;
+    enum Units {
+        Standart = 0;
+        Metric = 1;
+        Imperial = 2;
+    }
+    Units units = 3;
+}
+
+message CurrentWeatherReply {
+    string title = 1;
+    string description = 2;
+    double temp = 3;
+    double feels_like = 4;
+    int64 pressure = 5;
+    int64 humidity = 6;
+    int64 sea_level = 7;
+    int64 grnd_level = 8;
+}
