@@ -25,30 +25,43 @@ namespace WeStr.Server {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRQcm90b3Mvd2VhdGhlci5wcm90bxIFV2VTdHIaH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8ilQEKFUN1cnJlbnRXZWF0aGVyUmVxdWVzdBIL",
-            "CgNsYXQYASABKAESCwoDbG9uGAIgASgBEjEKBXVuaXRzGAMgASgOMiIuV2VT",
-            "dHIuQ3VycmVudFdlYXRoZXJSZXF1ZXN0LlVuaXRzIi8KBVVuaXRzEgwKCFN0",
-            "YW5kYXJ0EAASCgoGTWV0cmljEAESDAoISW1wZXJpYWwQAiLVAQoTQ3VycmVu",
-            "dFdlYXRoZXJSZXBseRINCgV0aXRsZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgC",
-            "IAEoCRIMCgR0ZW1wGAMgASgBEhIKCmZlZWxzX2xpa2UYBCABKAESEAoIcHJl",
-            "c3N1cmUYBSABKAMSEAoIaHVtaWRpdHkYBiABKAMSEQoJc2VhX2xldmVsGAcg",
-            "ASgDEhIKCmdybmRfbGV2ZWwYCCABKAMSLQoJdGltZXN0YW1wGAkgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcDK0AQoMV2VTdHJTZXJ2aWNlEk0K",
-            "EUdldEN1cnJlbnRXZWF0aGVyEhwuV2VTdHIuQ3VycmVudFdlYXRoZXJSZXF1",
-            "ZXN0GhouV2VTdHIuQ3VycmVudFdlYXRoZXJSZXBseRJVChdHZXRDdXJyZW50",
-            "V2VhdGhlclN0cmVhbRIcLldlU3RyLkN1cnJlbnRXZWF0aGVyUmVxdWVzdBoa",
-            "LldlU3RyLkN1cnJlbnRXZWF0aGVyUmVwbHkwAUIPqgIMV2VTdHIuU2VydmVy",
-            "YgZwcm90bzM="));
+            "Zi90aW1lc3RhbXAucHJvdG8iTgoVQ3VycmVudFdlYXRoZXJSZXF1ZXN0EgsK",
+            "A2xhdBgBIAEoARILCgNsb24YAiABKAESGwoFdW5pdHMYAyABKA4yDC5XZVN0",
+            "ci5Vbml0cyLVAQoTQ3VycmVudFdlYXRoZXJSZXBseRINCgV0aXRsZRgBIAEo",
+            "CRITCgtkZXNjcmlwdGlvbhgCIAEoCRIMCgR0ZW1wGAMgASgBEhIKCmZlZWxz",
+            "X2xpa2UYBCABKAESEAoIcHJlc3N1cmUYBSABKAMSEAoIaHVtaWRpdHkYBiAB",
+            "KAMSEQoJc2VhX2xldmVsGAcgASgDEhIKCmdybmRfbGV2ZWwYCCABKAMSLQoJ",
+            "dGltZXN0YW1wGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJF",
+            "ChhNdWx0aUN1cnJlbnRXZWF0aGVyUmVwbHkSKQoFcmVwbHkYASADKAsyGi5X",
+            "ZVN0ci5DdXJyZW50V2VhdGhlclJlcGx5Ki8KBVVuaXRzEgwKCFN0YW5kYXJ0",
+            "EAASCgoGTWV0cmljEAESDAoISW1wZXJpYWwQAjKSAgoMV2VTdHJTZXJ2aWNl",
+            "Ek0KEUdldEN1cnJlbnRXZWF0aGVyEhwuV2VTdHIuQ3VycmVudFdlYXRoZXJS",
+            "ZXF1ZXN0GhouV2VTdHIuQ3VycmVudFdlYXRoZXJSZXBseRJVChdHZXRDdXJy",
+            "ZW50V2VhdGhlclN0cmVhbRIcLldlU3RyLkN1cnJlbnRXZWF0aGVyUmVxdWVz",
+            "dBoaLldlU3RyLkN1cnJlbnRXZWF0aGVyUmVwbHkwARJcChlNdWx0aUN1cnJl",
+            "bnRXZWF0aGVyU3RyZWFtEhwuV2VTdHIuQ3VycmVudFdlYXRoZXJSZXF1ZXN0",
+            "Gh8uV2VTdHIuTXVsdGlDdXJyZW50V2VhdGhlclJlcGx5KAFCD6oCDFdlU3Ry",
+            "LlNlcnZlcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::WeStr.Server.CurrentWeatherRequest), global::WeStr.Server.CurrentWeatherRequest.Parser, new[]{ "Lat", "Lon", "Units" }, null, new[]{ typeof(global::WeStr.Server.CurrentWeatherRequest.Types.Units) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::WeStr.Server.CurrentWeatherReply), global::WeStr.Server.CurrentWeatherReply.Parser, new[]{ "Title", "Description", "Temp", "FeelsLike", "Pressure", "Humidity", "SeaLevel", "GrndLevel", "Timestamp" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::WeStr.Server.Units), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::WeStr.Server.CurrentWeatherRequest), global::WeStr.Server.CurrentWeatherRequest.Parser, new[]{ "Lat", "Lon", "Units" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WeStr.Server.CurrentWeatherReply), global::WeStr.Server.CurrentWeatherReply.Parser, new[]{ "Title", "Description", "Temp", "FeelsLike", "Pressure", "Humidity", "SeaLevel", "GrndLevel", "Timestamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WeStr.Server.MultiCurrentWeatherReply), global::WeStr.Server.MultiCurrentWeatherReply.Parser, new[]{ "Reply" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  public enum Units {
+    [pbr::OriginalName("Standart")] Standart = 0,
+    [pbr::OriginalName("Metric")] Metric = 1,
+    [pbr::OriginalName("Imperial")] Imperial = 2,
+  }
+
+  #endregion
+
   #region Messages
   public sealed partial class CurrentWeatherRequest : pb::IMessage<CurrentWeatherRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -122,10 +135,10 @@ namespace WeStr.Server {
 
     /// <summary>Field number for the "units" field.</summary>
     public const int UnitsFieldNumber = 3;
-    private global::WeStr.Server.CurrentWeatherRequest.Types.Units units_ = global::WeStr.Server.CurrentWeatherRequest.Types.Units.Standart;
+    private global::WeStr.Server.Units units_ = global::WeStr.Server.Units.Standart;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::WeStr.Server.CurrentWeatherRequest.Types.Units Units {
+    public global::WeStr.Server.Units Units {
       get { return units_; }
       set {
         units_ = value;
@@ -159,7 +172,7 @@ namespace WeStr.Server {
       int hash = 1;
       if (Lat != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Lat);
       if (Lon != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Lon);
-      if (Units != global::WeStr.Server.CurrentWeatherRequest.Types.Units.Standart) hash ^= Units.GetHashCode();
+      if (Units != global::WeStr.Server.Units.Standart) hash ^= Units.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -186,7 +199,7 @@ namespace WeStr.Server {
         output.WriteRawTag(17);
         output.WriteDouble(Lon);
       }
-      if (Units != global::WeStr.Server.CurrentWeatherRequest.Types.Units.Standart) {
+      if (Units != global::WeStr.Server.Units.Standart) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Units);
       }
@@ -208,7 +221,7 @@ namespace WeStr.Server {
         output.WriteRawTag(17);
         output.WriteDouble(Lon);
       }
-      if (Units != global::WeStr.Server.CurrentWeatherRequest.Types.Units.Standart) {
+      if (Units != global::WeStr.Server.Units.Standart) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Units);
       }
@@ -228,7 +241,7 @@ namespace WeStr.Server {
       if (Lon != 0D) {
         size += 1 + 8;
       }
-      if (Units != global::WeStr.Server.CurrentWeatherRequest.Types.Units.Standart) {
+      if (Units != global::WeStr.Server.Units.Standart) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Units);
       }
       if (_unknownFields != null) {
@@ -249,7 +262,7 @@ namespace WeStr.Server {
       if (other.Lon != 0D) {
         Lon = other.Lon;
       }
-      if (other.Units != global::WeStr.Server.CurrentWeatherRequest.Types.Units.Standart) {
+      if (other.Units != global::WeStr.Server.Units.Standart) {
         Units = other.Units;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -276,7 +289,7 @@ namespace WeStr.Server {
             break;
           }
           case 24: {
-            Units = (global::WeStr.Server.CurrentWeatherRequest.Types.Units) input.ReadEnum();
+            Units = (global::WeStr.Server.Units) input.ReadEnum();
             break;
           }
         }
@@ -303,27 +316,13 @@ namespace WeStr.Server {
             break;
           }
           case 24: {
-            Units = (global::WeStr.Server.CurrentWeatherRequest.Types.Units) input.ReadEnum();
+            Units = (global::WeStr.Server.Units) input.ReadEnum();
             break;
           }
         }
       }
     }
     #endif
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the CurrentWeatherRequest message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static partial class Types {
-      public enum Units {
-        [pbr::OriginalName("Standart")] Standart = 0,
-        [pbr::OriginalName("Metric")] Metric = 1,
-        [pbr::OriginalName("Imperial")] Imperial = 2,
-      }
-
-    }
-    #endregion
 
   }
 
@@ -812,6 +811,184 @@ namespace WeStr.Server {
               Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(Timestamp);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class MultiCurrentWeatherReply : pb::IMessage<MultiCurrentWeatherReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MultiCurrentWeatherReply> _parser = new pb::MessageParser<MultiCurrentWeatherReply>(() => new MultiCurrentWeatherReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MultiCurrentWeatherReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WeStr.Server.WeatherReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultiCurrentWeatherReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultiCurrentWeatherReply(MultiCurrentWeatherReply other) : this() {
+      reply_ = other.reply_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultiCurrentWeatherReply Clone() {
+      return new MultiCurrentWeatherReply(this);
+    }
+
+    /// <summary>Field number for the "reply" field.</summary>
+    public const int ReplyFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::WeStr.Server.CurrentWeatherReply> _repeated_reply_codec
+        = pb::FieldCodec.ForMessage(10, global::WeStr.Server.CurrentWeatherReply.Parser);
+    private readonly pbc::RepeatedField<global::WeStr.Server.CurrentWeatherReply> reply_ = new pbc::RepeatedField<global::WeStr.Server.CurrentWeatherReply>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::WeStr.Server.CurrentWeatherReply> Reply {
+      get { return reply_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MultiCurrentWeatherReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MultiCurrentWeatherReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!reply_.Equals(other.reply_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= reply_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      reply_.WriteTo(output, _repeated_reply_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      reply_.WriteTo(ref output, _repeated_reply_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += reply_.CalculateSize(_repeated_reply_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MultiCurrentWeatherReply other) {
+      if (other == null) {
+        return;
+      }
+      reply_.Add(other.reply_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            reply_.AddEntriesFrom(input, _repeated_reply_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            reply_.AddEntriesFrom(ref input, _repeated_reply_codec);
             break;
           }
         }

@@ -78,4 +78,35 @@ public class WeStrService : Server.WeStrService.WeStrServiceBase
             await Task.Delay(3000);
         }
     }
+
+    public override async Task<MultiCurrentWeatherReply> MultiCurrentWeatherStream (IAsyncStreamReader<CurrentWeatherRequest> streamReader,
+                                                                                    ServerCallContext context)
+    {
+        var httpClient = httpClientFactory.CreateClient();
+
+        var response = new MultiCurrentWeatherReply
+        {
+            Reply = {}
+        };
+
+        await foreach (var request in streamReader.ReadAllAsync())
+        {
+            var snap = await GetCurrentSnap(request, httpClient);
+
+            response.Reply.Add(new CurrentWeatherReply
+            {
+                Title = snap!.Weather[0].Main,
+                Description = snap!.Weather[0].Description,
+                Temp = snap!.Main.Temp,
+                FeelsLike = snap!.Main.FeelsLike,
+                Pressure = snap!.Main.Pressure,
+                Humidity = snap!.Main.Humidity,
+                SeaLevel = snap!.Main.SeaLevel,
+                GrndLevel = snap!.Main.GrndLevel,
+                Timestamp = Timestamp.FromDateTime(DateTime.UtcNow)
+            });
+        }
+
+        return response;
+    }
 }

@@ -9,16 +9,18 @@ package WeStr;
 service WeStrService {
     rpc GetCurrentWeather (CurrentWeatherRequest) returns (CurrentWeatherReply);
     rpc GetCurrentWeatherStream (CurrentWeatherRequest) returns (stream CurrentWeatherReply);
+    rpc MultiCurrentWeatherStream (stream CurrentWeatherRequest) returns (MultiCurrentWeatherReply);
+}
+
+enum Units {
+    Standart = 0;
+    Metric = 1;
+    Imperial = 2;
 }
 
 message CurrentWeatherRequest {
     double lat = 1;
-    double lon = 2;
-    enum Units {
-        Standart = 0;
-        Metric = 1;
-        Imperial = 2;
-    }
+    double lon = 2;    
     Units units = 3;
 }
 
@@ -32,4 +34,8 @@ message CurrentWeatherReply {
     int64 sea_level = 7;
     int64 grnd_level = 8;
     google.protobuf.Timestamp timestamp = 9;
+}
+
+message MultiCurrentWeatherReply {
+    repeated CurrentWeatherReply reply = 1;
 }

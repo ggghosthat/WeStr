@@ -49,6 +49,8 @@ namespace WeStr.Server {
     static readonly grpc::Marshaller<global::WeStr.Server.CurrentWeatherRequest> __Marshaller_WeStr_CurrentWeatherRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WeStr.Server.CurrentWeatherRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::WeStr.Server.CurrentWeatherReply> __Marshaller_WeStr_CurrentWeatherReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WeStr.Server.CurrentWeatherReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WeStr.Server.MultiCurrentWeatherReply> __Marshaller_WeStr_MultiCurrentWeatherReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WeStr.Server.MultiCurrentWeatherReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.CurrentWeatherReply> __Method_GetCurrentWeather = new grpc::Method<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.CurrentWeatherReply>(
@@ -65,6 +67,14 @@ namespace WeStr.Server {
         "GetCurrentWeatherStream",
         __Marshaller_WeStr_CurrentWeatherRequest,
         __Marshaller_WeStr_CurrentWeatherReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.MultiCurrentWeatherReply> __Method_MultiCurrentWeatherStream = new grpc::Method<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.MultiCurrentWeatherReply>(
+        grpc::MethodType.ClientStreaming,
+        __ServiceName,
+        "MultiCurrentWeatherStream",
+        __Marshaller_WeStr_CurrentWeatherRequest,
+        __Marshaller_WeStr_MultiCurrentWeatherReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -88,6 +98,12 @@ namespace WeStr.Server {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::WeStr.Server.MultiCurrentWeatherReply> MultiCurrentWeatherStream(grpc::IAsyncStreamReader<global::WeStr.Server.CurrentWeatherRequest> requestStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -97,7 +113,8 @@ namespace WeStr.Server {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetCurrentWeather, serviceImpl.GetCurrentWeather)
-          .AddMethod(__Method_GetCurrentWeatherStream, serviceImpl.GetCurrentWeatherStream).Build();
+          .AddMethod(__Method_GetCurrentWeatherStream, serviceImpl.GetCurrentWeatherStream)
+          .AddMethod(__Method_MultiCurrentWeatherStream, serviceImpl.MultiCurrentWeatherStream).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -109,6 +126,7 @@ namespace WeStr.Server {
     {
       serviceBinder.AddMethod(__Method_GetCurrentWeather, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.CurrentWeatherReply>(serviceImpl.GetCurrentWeather));
       serviceBinder.AddMethod(__Method_GetCurrentWeatherStream, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.CurrentWeatherReply>(serviceImpl.GetCurrentWeatherStream));
+      serviceBinder.AddMethod(__Method_MultiCurrentWeatherStream, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.MultiCurrentWeatherReply>(serviceImpl.MultiCurrentWeatherStream));
     }
 
   }
