@@ -1,9 +1,3 @@
-D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.csproj.AssemblyReference.cache
-D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.GeneratedMSBuildEditorConfig.editorconfig
-D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.AssemblyInfoInputs.cache
-D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.AssemblyInfo.cs
-D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.csproj.CoreCompileInputs.cache
-D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.MvcApplicationPartsAssemblyInfo.cache
 D:\repos\WeStr\WeStr.Server\bin\Debug\net7.0\appsettings.Development.json
 D:\repos\WeStr\WeStr.Server\bin\Debug\net7.0\appsettings.json
 D:\repos\WeStr\WeStr.Server\bin\Debug\net7.0\WeStr.Server.exe
@@ -18,6 +12,12 @@ D:\repos\WeStr\WeStr.Server\bin\Debug\net7.0\Grpc.Core.Api.dll
 D:\repos\WeStr\WeStr.Server\bin\Debug\net7.0\Grpc.Net.Client.dll
 D:\repos\WeStr\WeStr.Server\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
 D:\repos\WeStr\WeStr.Server\bin\Debug\net7.0\Grpc.Net.Common.dll
+D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.csproj.AssemblyReference.cache
+D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.AssemblyInfoInputs.cache
+D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.AssemblyInfo.cs
+D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.csproj.CoreCompileInputs.cache
+D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\WeStr.Server.MvcApplicationPartsAssemblyInfo.cache
 D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\staticwebassets\msbuild.WeStr.Server.Microsoft.AspNetCore.StaticWebAssets.props
 D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\staticwebassets\msbuild.build.WeStr.Server.props
 D:\repos\WeStr\WeStr.Server\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.WeStr.Server.props

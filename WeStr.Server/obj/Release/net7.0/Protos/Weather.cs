@@ -24,22 +24,26 @@ namespace WeStr.Server {
     static WeatherReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRQcm90b3Mvd2VhdGhlci5wcm90bxIFV2VTdHIilQEKFUN1cnJlbnRXZWF0",
-            "aGVyUmVxdWVzdBILCgNsYXQYASABKAESCwoDbG9uGAIgASgBEjEKBXVuaXRz",
-            "GAMgASgOMiIuV2VTdHIuQ3VycmVudFdlYXRoZXJSZXF1ZXN0LlVuaXRzIi8K",
-            "BVVuaXRzEgwKCFN0YW5kYXJ0EAASCgoGTWV0cmljEAESDAoISW1wZXJpYWwQ",
-            "AiKmAQoTQ3VycmVudFdlYXRoZXJSZXBseRINCgV0aXRsZRgBIAEoCRITCgtk",
-            "ZXNjcmlwdGlvbhgCIAEoCRIMCgR0ZW1wGAMgASgBEhIKCmZlZWxzX2xpa2UY",
-            "BCABKAESEAoIcHJlc3N1cmUYBSABKAMSEAoIaHVtaWRpdHkYBiABKAMSEQoJ",
-            "c2VhX2xldmVsGAcgASgDEhIKCmdybmRfbGV2ZWwYCCABKAMyXQoMV2VTdHJT",
-            "ZXJ2aWNlEk0KEUdldEN1cnJlbnRXZWF0aGVyEhwuV2VTdHIuQ3VycmVudFdl",
-            "YXRoZXJSZXF1ZXN0GhouV2VTdHIuQ3VycmVudFdlYXRoZXJSZXBseUIPqgIM",
-            "V2VTdHIuU2VydmVyYgZwcm90bzM="));
+            "ChRQcm90b3Mvd2VhdGhlci5wcm90bxIFV2VTdHIaH2dvb2dsZS9wcm90b2J1",
+            "Zi90aW1lc3RhbXAucHJvdG8ilQEKFUN1cnJlbnRXZWF0aGVyUmVxdWVzdBIL",
+            "CgNsYXQYASABKAESCwoDbG9uGAIgASgBEjEKBXVuaXRzGAMgASgOMiIuV2VT",
+            "dHIuQ3VycmVudFdlYXRoZXJSZXF1ZXN0LlVuaXRzIi8KBVVuaXRzEgwKCFN0",
+            "YW5kYXJ0EAASCgoGTWV0cmljEAESDAoISW1wZXJpYWwQAiLVAQoTQ3VycmVu",
+            "dFdlYXRoZXJSZXBseRINCgV0aXRsZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgC",
+            "IAEoCRIMCgR0ZW1wGAMgASgBEhIKCmZlZWxzX2xpa2UYBCABKAESEAoIcHJl",
+            "c3N1cmUYBSABKAMSEAoIaHVtaWRpdHkYBiABKAMSEQoJc2VhX2xldmVsGAcg",
+            "ASgDEhIKCmdybmRfbGV2ZWwYCCABKAMSLQoJdGltZXN0YW1wGAkgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcDK0AQoMV2VTdHJTZXJ2aWNlEk0K",
+            "EUdldEN1cnJlbnRXZWF0aGVyEhwuV2VTdHIuQ3VycmVudFdlYXRoZXJSZXF1",
+            "ZXN0GhouV2VTdHIuQ3VycmVudFdlYXRoZXJSZXBseRJVChdHZXRDdXJyZW50",
+            "V2VhdGhlclN0cmVhbRIcLldlU3RyLkN1cnJlbnRXZWF0aGVyUmVxdWVzdBoa",
+            "LldlU3RyLkN1cnJlbnRXZWF0aGVyUmVwbHkwAUIPqgIMV2VTdHIuU2VydmVy",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::WeStr.Server.CurrentWeatherRequest), global::WeStr.Server.CurrentWeatherRequest.Parser, new[]{ "Lat", "Lon", "Units" }, null, new[]{ typeof(global::WeStr.Server.CurrentWeatherRequest.Types.Units) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::WeStr.Server.CurrentWeatherReply), global::WeStr.Server.CurrentWeatherReply.Parser, new[]{ "Title", "Description", "Temp", "FeelsLike", "Pressure", "Humidity", "SeaLevel", "GrndLevel" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::WeStr.Server.CurrentWeatherReply), global::WeStr.Server.CurrentWeatherReply.Parser, new[]{ "Title", "Description", "Temp", "FeelsLike", "Pressure", "Humidity", "SeaLevel", "GrndLevel", "Timestamp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -365,6 +369,7 @@ namespace WeStr.Server {
       humidity_ = other.humidity_;
       seaLevel_ = other.seaLevel_;
       grndLevel_ = other.grndLevel_;
+      timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -470,6 +475,18 @@ namespace WeStr.Server {
       }
     }
 
+    /// <summary>Field number for the "timestamp" field.</summary>
+    public const int TimestampFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
+      get { return timestamp_; }
+      set {
+        timestamp_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -493,6 +510,7 @@ namespace WeStr.Server {
       if (Humidity != other.Humidity) return false;
       if (SeaLevel != other.SeaLevel) return false;
       if (GrndLevel != other.GrndLevel) return false;
+      if (!object.Equals(Timestamp, other.Timestamp)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -508,6 +526,7 @@ namespace WeStr.Server {
       if (Humidity != 0L) hash ^= Humidity.GetHashCode();
       if (SeaLevel != 0L) hash ^= SeaLevel.GetHashCode();
       if (GrndLevel != 0L) hash ^= GrndLevel.GetHashCode();
+      if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -558,6 +577,10 @@ namespace WeStr.Server {
         output.WriteRawTag(64);
         output.WriteInt64(GrndLevel);
       }
+      if (timestamp_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Timestamp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -600,6 +623,10 @@ namespace WeStr.Server {
         output.WriteRawTag(64);
         output.WriteInt64(GrndLevel);
       }
+      if (timestamp_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Timestamp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -633,6 +660,9 @@ namespace WeStr.Server {
       }
       if (GrndLevel != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(GrndLevel);
+      }
+      if (timestamp_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -669,6 +699,12 @@ namespace WeStr.Server {
       }
       if (other.GrndLevel != 0L) {
         GrndLevel = other.GrndLevel;
+      }
+      if (other.timestamp_ != null) {
+        if (timestamp_ == null) {
+          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        Timestamp.MergeFrom(other.Timestamp);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -717,6 +753,13 @@ namespace WeStr.Server {
             GrndLevel = input.ReadInt64();
             break;
           }
+          case 74: {
+            if (timestamp_ == null) {
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Timestamp);
+            break;
+          }
         }
       }
     #endif
@@ -762,6 +805,13 @@ namespace WeStr.Server {
           }
           case 64: {
             GrndLevel = input.ReadInt64();
+            break;
+          }
+          case 74: {
+            if (timestamp_ == null) {
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Timestamp);
             break;
           }
         }

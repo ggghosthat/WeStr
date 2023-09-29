@@ -8,23 +8,24 @@
     ".NETCoreApp,Version=v7.0": {
       "WeStr.Server/1.0.0": {
         "dependencies": {
+          "Google.Protobuf": "3.24.3",
           "Grpc.AspNetCore": "2.49.0"
         },
         "runtime": {
           "WeStr.Server.dll": {}
         }
       },
-      "Google.Protobuf/3.21.5": {
+      "Google.Protobuf/3.24.3": {
         "runtime": {
           "lib/net5.0/Google.Protobuf.dll": {
-            "assemblyVersion": "3.21.5.0",
-            "fileVersion": "3.21.5.0"
+            "assemblyVersion": "3.24.3.0",
+            "fileVersion": "3.24.3.0"
           }
         }
       },
       "Grpc.AspNetCore/2.49.0": {
         "dependencies": {
-          "Google.Protobuf": "3.21.5",
+          "Google.Protobuf": "3.24.3",
           "Grpc.AspNetCore.Server.ClientFactory": "2.49.0",
           "Grpc.Tools": "2.49.0"
         }
@@ -152,12 +153,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Google.Protobuf/3.21.5": {
+    "Google.Protobuf/3.24.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-d7zwRm0edg2cxqRynMD31F8HUUyicBT0l5M74EIsU6GAaq3dxxaZ/PpSPlso010W9nIXoVVKUYZSsiOspAOO/A==",
-      "path": "google.protobuf/3.21.5",
-      "hashPath": "google.protobuf.3.21.5.nupkg.sha512"
+      "sha512": "sha512-HX8KHRTJPUcC4KOvEobKBNlMpHGYmK+3X73xPq+OUE2M5dLYvpGhp9qQQWt2jASgTUbxI1yHaGeBqFYiECBupw==",
+      "path": "google.protobuf/3.24.3",
+      "hashPath": "google.protobuf.3.24.3.nupkg.sha512"
     },
     "Grpc.AspNetCore/2.49.0": {
       "type": "package",

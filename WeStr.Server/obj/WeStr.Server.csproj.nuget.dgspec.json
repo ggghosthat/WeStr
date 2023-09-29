@@ -40,6 +40,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.24.3, )"
+            },
             "Grpc.AspNetCore": {
               "target": "Package",
               "version": "[2.49.0, )"

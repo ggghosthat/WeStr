@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "067eRknyh7nIBrnjHS88LYPOI1lCimsNVwI7Dr4RVJwKU9Wb3wnFSle2z6spJZlu/1dFt4uQKgmwE5w0xcmQnQ==",
+  "dgSpecHash": "w5eLMRPl1+eNPY+4S1ZOhcGT/7f+xy6CQCgf7uaHaYlysUH1sn54FCoe/0JtB0S4Ye5FgX7sxxjAonJJAXdhxg==",
   "success": true,
   "projectFilePath": "D:\\repos\\WeStr\\WeStr.Server\\WeStr.Server.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ildar\\.nuget\\packages\\google.protobuf\\3.21.5\\google.protobuf.3.21.5.nupkg.sha512",
+    "C:\\Users\\ildar\\.nuget\\packages\\google.protobuf\\3.24.3\\google.protobuf.3.24.3.nupkg.sha512",
     "C:\\Users\\ildar\\.nuget\\packages\\grpc.aspnetcore\\2.49.0\\grpc.aspnetcore.2.49.0.nupkg.sha512",
     "C:\\Users\\ildar\\.nuget\\packages\\grpc.aspnetcore.server\\2.49.0\\grpc.aspnetcore.server.2.49.0.nupkg.sha512",
     "C:\\Users\\ildar\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.49.0\\grpc.aspnetcore.server.clientfactory.2.49.0.nupkg.sha512",

@@ -2,10 +2,13 @@ syntax = "proto3";
 
 option csharp_namespace = "WeStr.Server";
 
+import "google/protobuf/timestamp.proto";
+
 package WeStr;
 
 service WeStrService {
     rpc GetCurrentWeather (CurrentWeatherRequest) returns (CurrentWeatherReply);
+    rpc GetCurrentWeatherStream (CurrentWeatherRequest) returns (stream CurrentWeatherReply);
 }
 
 message CurrentWeatherRequest {
@@ -28,4 +31,5 @@ message CurrentWeatherReply {
     int64 humidity = 6;
     int64 sea_level = 7;
     int64 grnd_level = 8;
+    google.protobuf.Timestamp timestamp = 9;
 }

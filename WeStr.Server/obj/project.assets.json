@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Google.Protobuf/3.21.5": {
+      "Google.Protobuf/3.24.3": {
         "type": "package",
         "compile": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -310,14 +310,14 @@
     }
   },
   "libraries": {
-    "Google.Protobuf/3.21.5": {
-      "sha512": "d7zwRm0edg2cxqRynMD31F8HUUyicBT0l5M74EIsU6GAaq3dxxaZ/PpSPlso010W9nIXoVVKUYZSsiOspAOO/A==",
+    "Google.Protobuf/3.24.3": {
+      "sha512": "HX8KHRTJPUcC4KOvEobKBNlMpHGYmK+3X73xPq+OUE2M5dLYvpGhp9qQQWt2jASgTUbxI1yHaGeBqFYiECBupw==",
       "type": "package",
-      "path": "google.protobuf/3.21.5",
+      "path": "google.protobuf/3.24.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.21.5.nupkg.sha512",
+        "google.protobuf.3.24.3.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -738,6 +738,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Google.Protobuf >= 3.24.3",
       "Grpc.AspNetCore >= 2.49.0"
     ]
   },
@@ -780,6 +781,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Google.Protobuf": {
+            "target": "Package",
+            "version": "[3.24.3, )"
+          },
           "Grpc.AspNetCore": {
             "target": "Package",
             "version": "[2.49.0, )"

@@ -58,6 +58,14 @@ namespace WeStr.Server {
         __Marshaller_WeStr_CurrentWeatherRequest,
         __Marshaller_WeStr_CurrentWeatherReply);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.CurrentWeatherReply> __Method_GetCurrentWeatherStream = new grpc::Method<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.CurrentWeatherReply>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "GetCurrentWeatherStream",
+        __Marshaller_WeStr_CurrentWeatherRequest,
+        __Marshaller_WeStr_CurrentWeatherReply);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -74,6 +82,12 @@ namespace WeStr.Server {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task GetCurrentWeatherStream(global::WeStr.Server.CurrentWeatherRequest request, grpc::IServerStreamWriter<global::WeStr.Server.CurrentWeatherReply> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -82,7 +96,8 @@ namespace WeStr.Server {
     public static grpc::ServerServiceDefinition BindService(WeStrServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetCurrentWeather, serviceImpl.GetCurrentWeather).Build();
+          .AddMethod(__Method_GetCurrentWeather, serviceImpl.GetCurrentWeather)
+          .AddMethod(__Method_GetCurrentWeatherStream, serviceImpl.GetCurrentWeatherStream).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -93,6 +108,7 @@ namespace WeStr.Server {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, WeStrServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetCurrentWeather, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.CurrentWeatherReply>(serviceImpl.GetCurrentWeather));
+      serviceBinder.AddMethod(__Method_GetCurrentWeatherStream, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::WeStr.Server.CurrentWeatherRequest, global::WeStr.Server.CurrentWeatherReply>(serviceImpl.GetCurrentWeatherStream));
     }
 
   }
